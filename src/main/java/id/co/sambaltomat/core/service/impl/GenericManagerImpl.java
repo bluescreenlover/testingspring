@@ -22,10 +22,10 @@ import java.util.Map;
  * <p/>
  * <p>To register this class in your Spring context file, use the following XML.
  * <pre>
- *     &lt;bean id="userManager" class="id.co.jasindo.core.service.impl.GenericManagerImpl"&gt;
+ *     &lt;bean id="userManager" class="id.co.sambaltomat.core.service.impl.GenericManagerImpl"&gt;
  *         &lt;constructor-arg&gt;
- *             &lt;bean class="id.co.jasindo.core.dao.hibernate.GenericDaoHibernate"&gt;
- *                 &lt;constructor-arg value="id.co.jasindo.security.model.User"/&gt;
+ *             &lt;bean class="id.co.sambaltomat.core.dao.hibernate.GenericDaoHibernate"&gt;
+ *                 &lt;constructor-arg value="id.co.sambaltomat.security.model.User"/&gt;
  *                 &lt;property name="sessionFactory" ref="sessionFactory"/&gt;
  *             &lt;/bean&gt;
  *         &lt;/constructor-arg&gt;
@@ -34,10 +34,10 @@ import java.util.Map;
  * <p/>
  * <p>If you're using iBATIS instead of Hibernate, use:
  * <pre>
- *     &lt;bean id="userManager" class="id.co.jasindo.core.service.impl.GenericManagerImpl"&gt;
+ *     &lt;bean id="userManager" class="id.co.sambaltomat.core.service.impl.GenericManagerImpl"&gt;
  *         &lt;constructor-arg&gt;
- *             &lt;bean class="id.co.jasindo.core.dao.ibatis.GenericDaoiBatis"&gt;
- *                 &lt;constructor-arg value="id.co.jasindo.security.model.User"/&gt;
+ *             &lt;bean class="id.co.sambaltomat.core.dao.ibatis.GenericDaoiBatis"&gt;
+ *                 &lt;constructor-arg value="id.co.sambaltomat.security.model.User"/&gt;
  *                 &lt;property name="dataSource" ref="dataSource"/&gt;
  *                 &lt;property name="sqlMapClient" ref="sqlMapClient"/&gt;
  *             &lt;/bean&gt;

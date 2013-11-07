@@ -34,8 +34,8 @@ import java.util.*;
  * <p/>
  * <p>To register this class in your Spring context file, use the following XML.
  * <pre>
- *      &lt;bean id="fooDao" class="id.co.jasindo.core.dao.hibernate.GenericDaoHibernate"&gt;
- *          &lt;constructor-arg value="id.co.jasindo.core.model.Foo"/&gt;
+ *      &lt;bean id="fooDao" class="id.co.sambaltomat.core.dao.hibernate.GenericDaoHibernate"&gt;
+ *          &lt;constructor-arg value="id.co.sambaltomat.core.model.Foo"/&gt;
  *          &lt;property name="sessionFactory" ref="sessionFactory"/&gt;
  *      &lt;/bean&gt;
  * </pre>
