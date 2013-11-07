@@ -44,12 +44,24 @@
         <level value="OFF"/>
     </logger>
 
+    <logger name="org.springframework.web.servlet">
+        <level value="ALL"/>
+    </logger>
+
     <logger name="org.springframework.web">
+        <level value="INFO"/>
+    </logger>
+
+    <logger name="org.springframework">
+        <level value="OFF"/>
+    </logger>
+
+    <logger name="org.hibernate">
         <level value="ALL"/>
     </logger>
 
     <logger name="id.co.sambaltomat">
-        <level value="ALL"/>
+        <level value="DEBUG"/>
     </logger>
 
     <!--setting global untuk logger yg tidak diset <LEVEL></LEVEL>-->

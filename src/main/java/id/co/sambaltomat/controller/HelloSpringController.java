@@ -19,13 +19,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HelloSpringController {
 
-    /*@Autowired
+    @Autowired
     @Qualifier("testModelManager")
-    public GenericManager<TestModel,Long> testModelManager;*/
+    public GenericManager<TestModel,Long> testModelManager;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
-        model.addAttribute("message", "asdsadasd  sads");
+
+        TestModel tm = new TestModel();
+        tm.setHelloModel("Hello -"+Math.random());
+        testModelManager.save(tm);
+
+        model.addAttribute("message", tm.toString());
         return "output";
     }
 

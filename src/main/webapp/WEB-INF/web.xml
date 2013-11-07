@@ -22,6 +22,7 @@
             classpath:DataSource.xml
             classpath:applicationContext-Resources.xml
             /WEB-INF/dispatcher-servlet.xml
+            classpath:applicationContext-dao.xml
             classpath:applicationContext-Service.xml
         </param-value>
     </context-param>
@@ -50,6 +51,14 @@
     <filter>
         <filter-name>lazyLoadingFilter</filter-name>
         <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+        <!--<init-param>
+            <param-name>singleSession</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>flushMode</param-name>
+            <param-value>AUTO</param-value>
+        </init-param>-->
     </filter>
 
     <filter-mapping>

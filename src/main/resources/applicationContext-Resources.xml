@@ -19,7 +19,7 @@
                 <!--Overide default isolation DB2 RR jadi RC -->
                 hibernate.connection.isolation=2
                 hibernate.format_sql=true
-                hibernate.hbm2ddl.auto=update
+                <!--hibernate.hbm2ddl.auto=update-->
                 hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider
             </value>
             <!-- Turn batching off for better error messages under PostgreSQL -->
