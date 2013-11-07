@@ -1,7 +1,9 @@
 package id.co.sambaltomat.controller;
 
+import id.co.sambaltomat.core.service.GenericManager;
 import id.co.sambaltomat.model.TestModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +19,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HelloSpringController {
 
-    @Autowired
-    public TestModel testModel;
+    /*@Autowired
+    @Qualifier("testModelManager")
+    public GenericManager<TestModel,Long> testModelManager;*/
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
-        model.addAttribute("message", testModel.getHelloModel());
+        model.addAttribute("message", "asdsadasd  sads");
         return "output";
     }
 

@@ -49,7 +49,7 @@
     </logger>
 
     <logger name="id.co.sambaltomat">
-        <level value="DEBUG"/>
+        <level value="ALL"/>
     </logger>
 
     <!--setting global untuk logger yg tidak diset <LEVEL></LEVEL>-->
