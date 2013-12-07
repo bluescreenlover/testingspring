@@ -752,31 +752,5 @@ public class GenericDaoHibernate<T, PK extends Serializable> extends HibernateDa
     public void clearCache(){
         getSession().clear();
     }
-    /*
-    public static void main(String[] args)
-    {
-        List<JoinPath>list = new ArrayList<JoinPath>();
-        list.add(new GenericDao.JoinPath("this.obligasiId", "obligasi", GenericDao.JoinType.LEFT_JOIN));
-        list.add(new GenericDao.JoinPath("this.noAccountSumber", "accountBank", GenericDao.JoinType.LEFT_JOIN));
-        list.add(new GenericDao.JoinPath("obligasi.kodeCabang", "cabang", GenericDao.JoinType.LEFT_JOIN));
-        list.add(new GenericDao.JoinPath("obligasi.kodeObligasi", "masterObligasi", GenericDao.JoinType.LEFT_JOIN));
-        list.add(new GenericDao.JoinPath("this.currOriginal", "currency", GenericDao.JoinType.LEFT_JOIN));
-        list.add(new GenericDao.JoinPath("obligasi.kodeFundManager", "fundManager", GenericDao.JoinType.LEFT_JOIN));
-        list.add(new GenericDao.JoinPath("obligasi.kodeJenisInvestasi", "parameter", GenericDao.JoinType.LEFT_JOIN));
-        list.add(new GenericDao.JoinPath("obligasi.pencairanObligasiList", "pencairan", GenericDao.JoinType.LEFT_JOIN));
-
-        list.add(new GenericDao.JoinPath("masterObligasi.emiten", "emiten", GenericDao.JoinType.LEFT_JOIN));
-        list.add(new GenericDao.JoinPath("accountBank.bank", "bank", GenericDao.JoinType.LEFT_JOIN));
-
-        list.add(new GenericDao.JoinPath("pencairan.currNominal", "currencyCair", GenericDao.JoinType.LEFT_JOIN));
-        GenericDaoHibernate genericDaoHibernate = new GenericDaoHibernate(Customer.class);
-        try
-        {
-            genericDaoHibernate.recursiveInitialize(list, new Customer());
-        }
-        catch (OgnlException e)
-        {
-            e.printStackTrace();
-        }
-    }*/
+    
 }
