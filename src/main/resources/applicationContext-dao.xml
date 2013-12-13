@@ -8,5 +8,9 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
+    <bean id="userDao" class="id.co.sambaltomat.core.dao.hibernate.UserDaoHibernate">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
 </beans>
 

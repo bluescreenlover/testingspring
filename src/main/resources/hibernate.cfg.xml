@@ -4,6 +4,11 @@
 <hibernate-configuration>
     <session-factory>
 
+        <!-- core -->
+        <mapping class="id.co.sambaltomat.core.model.User"/>
+        <mapping class="id.co.sambaltomat.core.model.Roles"/>
+        <!-- end core -->
+
         <mapping class="id.co.sambaltomat.model.TestModel"/>
 
     </session-factory>

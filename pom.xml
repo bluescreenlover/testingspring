@@ -226,10 +226,32 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-remoting</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>2.5.6-rmi-compatibility</version>
+        </dependency>-->
+
     </dependencies>
 
     <properties>
         <spring.version>3.2.4.RELEASE</spring.version>
+        <spring.security.version>3.1.4.RELEASE</spring.security.version>
         <persistence.api.version>1.0.2</persistence.api.version>
         <junit.version>3.8.1</junit.version>
         <log4j.version>1.2.13</log4j.version>
@@ -424,7 +446,7 @@
                         <artifactId>tomcat7-maven-plugin</artifactId>
                         <version>2.1</version>
                         <configuration>
-                            <port>8080</port>
+                            <port>8585</port>
                             <path>/spring32</path>
                         </configuration>
                     </plugin>

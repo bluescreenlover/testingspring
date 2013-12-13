@@ -13,4 +13,9 @@
 
     <!--<bean name="/hello" class="id.co.sambaltomat.controller.HelloSpringController"/>-->
 
+    <!--<bean id="userService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+        <property name="serviceUrl" value="rmi://localhost:1099/UserService" />
+        <property name="serviceInterface" value="org.springframework.security.core.userdetails.UserDetailsService" />
+    </bean>-->
+
 </beans>

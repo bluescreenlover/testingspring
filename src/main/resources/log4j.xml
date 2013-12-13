@@ -44,8 +44,12 @@
         <level value="OFF"/>
     </logger>
 
-    <logger name="org.springframework.web.servlet">
+    <logger name="org.springframework.security">
         <level value="ALL"/>
+    </logger>
+
+    <logger name="org.springframework.web.servlet">
+        <level value="OFF"/>
     </logger>
 
     <logger name="org.springframework.web">
