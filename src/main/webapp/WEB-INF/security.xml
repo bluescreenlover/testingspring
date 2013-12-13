@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bean="http://www.springframework.org/schema/security"
+       xmlns:Security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <bean:http auto-config="true">
+        <bean:intercept-url pattern="/**" access="ROLE_USER,IS_AUTHENTICATED_FULLY" />
+    </bean:http>
+
+    <security:authentication-manager>
+        <!--<security:authentication-provider>
+            <security:user-service>
+                <security:user name="jimi" password="jimi" authorities="ROLE_USER, ROLE_ADMIN" />
+                <security:user name="bob" password="jimi" authorities="ROLE_USER" />
+            </security:user-service>
+        </security:authentication-provider>-->
+        <security:authentication-provider user-service-ref="userDao"/>
+    </security:authentication-manager>
+
+
+
+    <!-- For Remote Login-->
+    <!--<security:http auto-config="true">
+        <security:intercept-url pattern="/**" access="IS_AUTHENTICATED_FULLY"/>
+        <security:form-login/>
+    </security:http>
+
+    <security:authentication-manager alias="authenticationManager">
+        <security:authentication-provider user-service-ref="userService"/>
+    </security:authentication-manager>-->
+
+
+</beans>
